@@ -1,50 +1,58 @@
-# Welcome to your Expo app 👋
+# Welcome to your INgress app 👋
+INgress地图软件
+现在已有功能：
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+1、添加门泉列表，点击门泉选项卡，可以查看门泉详情。
 
-## Get started
+2、实现了一些简单的地图游戏INgress玩法如：入侵、占领门泉等。
 
-1. Install dependencies
+3、集成了高德地图的API，其中高德地图API要自己部署，具体部署方法问AI就行。只要将API密钥输入即可实现地图游戏功能。
 
+## 如何使用
+
+#### 步骤一：配置API密钥
+在代码中替换为你的真实密钥：
    ```bash
-   npm install
+   const AMAP_API_KEY = '你的真实高德地图API密钥';
    ```
 
-2. Start the app
-
+#### 步骤二：快速部署下载依赖(请使用bash或者powershell)：
    ```bash
-   npx expo start
+   # 检查 Node.js 版本（需要 14+）
+   node --version
+
+   # 检查 npm 版本
+   npm --version
+
+   # 检查 React Native CLI
+   npx react-native --version
    ```
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+   ```bash
+   cd your-project-name  先进入项目目录
+   ```
+步骤1：安装Expo CLI（如果还没有）
 ```bash
-npm run reset-project
+npm install -g expo-cli
+```
+步骤2：创建新项目
+```bash
+cd C:\react_native
+npx create-expo-app IngressExpo
+cd IngressExpo
+```
+步骤3：安装必要依赖
+```bash
+npm install react-native-maps
+npm install expo-location
+npm install expo-device
+```
+步骤4：启动开发服务器
+```bash
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+#### 步骤三：Download the app
+命令行执行完之后，终端会返回一个二维码。去Google Play下载一个Expo Go软件，利用Expo Go软件扫描终端中显示的二维码，应用将立即在手机上运行。
+之后就可以调试运行了。
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
